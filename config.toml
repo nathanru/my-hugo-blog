@@ -1,6 +1,6 @@
 baseURL = "https://example.com"
 title = "My Blog"
-theme = "etch"
+theme = "salinger"
 languageCode = "en-US"
 enableInlineShortcodes = true
 pygmentsCodeFences = true
