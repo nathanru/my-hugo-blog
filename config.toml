@@ -1,35 +1,50 @@
-baseURL = "https://example.com"
+baseURL = "https://thenathanjrussell.com"
+languageCode = "en-us"
+defaultContentLanguage = "en"
 title = "My Blog"
-theme = "salinger"
-languageCode = "en-US"
-enableInlineShortcodes = true
-pygmentsCodeFences = true
-pygmentsUseClasses = true
+theme = "cupper-hugo-theme"
+enableGitInfo = true
 
-[params]
-  description = "Your site description"
-  copyright = "Copyright © 2020 Your Name"
-  dark = "off"
-  highlight = true
-
-[menu]
-  [[menu.main]]
-    identifier = "posts"
-    name = "posts"
-    title = "posts"
-    url = "/"
-    weight = 10
-
-  [[menu.main]]
-    identifier = "about"
-    name = "about"
-    title = "about"
-    url = "/about/"
-    weight = 20
+[taxonomies]
+  tag = "tags"
 
 [permalinks]
-  posts = "/:title/"
+  post = "/:filename/"
 
-[markup.goldmark.renderer]
-  # Allows HTML in Markdown
-  unsafe = true
+[imaging]
+  quality = "99"
+
+[params]
+  description = "An accessibility-friendly Hugo theme, ported from the [original Cupper](https://github.com/ThePacielloGroup/cupper) project."
+  homeMetaContent = "An accessibility-friendly Hugo theme, ported from the original Cupper project."
+  footer = "Made with [Hugo](https://gohugo.io/). Themed by [Cupper](https://github.com/zwbetz-gh/cupper-hugo-theme). Deployed to [Netlify](https://www.netlify.com/)."
+  # For more date formats see https://gohugo.io/functions/format/
+  dateFormat = "Jan 2, 2006"
+  codePenUser = "someUser"
+  katex = true
+  hideHeaderLinks = false
+  search = true
+  showThemeSwitcher = true
+  defaultDarkTheme = false
+  moveFooterToHeader = false
+  # navTitleText = "Cupper Theme"
+  logoAlt = "An alternative text description of the logo"
+  customCss = [
+    "css/custom_01.css",
+    "css/custom_02.css"
+  ]
+  customJs = [
+    "js/custom_01.js",
+    "js/custom_02.js"
+  ]
+  [utterances]
+    repo = "username/username.github.io"
+    issueTerm = "title"
+    theme = "github-light"
+
+[[menu.nav]]
+  name = "Home"
+  url = "/"
+  weight = 1
+[[menu.nav]]
+  name = "Blog"
